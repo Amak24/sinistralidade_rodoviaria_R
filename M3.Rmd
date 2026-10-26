@@ -1,0 +1,172 @@
+---
+title: "M3 Qualidade preparação e análise exploratória"
+subtitle: "Sinistralidade rodoviária e internamentos por lesões"
+author: "Amak Adriano Evaristo Machava"
+date: "25 de outubro de 2026"
+output:
+  html_document:
+    toc: true
+    number_sections: false
+    self_contained: true
+  word_document:
+    toc: true
+---
+
+```{r preparacao, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 9, fig.height = 5, dpi = 160)
+source("executar_M3.R", encoding = "UTF-8")
+source("R/06_exportar_graficos.R", encoding = "UTF-8")
+exportar_graficos(5)
+source("config/ler_repositorio.R", encoding = "UTF-8")
+repo_url <- ler_repositorio()
+fmt <- function(x, d = 2) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = " ")
+```
+
+**Universidade Fernando Pessoa - Seminário de Sistemas e Aplicações - 2026/2027**
+
+`r if (nzchar(repo_url)) paste0("**Repositório GitHub:** ", repo_url) else ""`
+
+```{r indicadores, include=FALSE}
+v24 <- comparacao_veiculos %>% filter(ano == 2024)
+m24 <- v24 %>% filter(veiculo == "Motociclos")
+l24 <- v24 %>% filter(veiculo == "Veículos ligeiros")
+via24 <- ansr_vias %>% filter(ano == 2024) %>% arrange(desc(proporcao_grave))
+rho <- associacoes$rho_dias[associacoes$periodo_analise == "Total"]
+```
+
+# M3 Qualidade preparação de dados EDA e estratégia de análise
+
+EDA significa *Exploratory Data Analysis*, ou **Análise Exploratória dos Dados**. Esta fase usa tabelas, indicadores e gráficos para compreender a distribuição dos dados, identificar padrões e avaliar a sua qualidade antes da modelação final.
+
+## Preparação e qualidade
+
+## Omissos e validação
+
+A importação é seguida de validação das colunas, datas, contagens não negativas, valores inteiros e consistência entre óbitos e internamentos. A auditoria abaixo descreve a versão preservada.
+
+```{r auditoria}
+knitr::kable(auditoria, col.names = c("Verificação", "Valor"))
+```
+
+```{r omissos}
+knitr::kable(omissos, col.names = c("Variável", "Valores ausentes"))
+```
+
+Não foram encontrados valores em falta nesta extração. O código produz uma auditoria e interrompe a execução se uma atualização introduzir omissos nas contagens. As células publicadas com zero episódios são mantidas nas agregações de contagens; a sua duração média fica como NA e não entra no modelo. Uma célula que não foi publicada não é preenchida com zero.
+
+## Chaves repetidas e escolha do painel
+
+A chave analisada é mês + região + instituição + capítulo + faixa etária + sexo. Existem `r nrow(chaves_repetidas)` chaves com mais de uma linha e `r sum(chaves_repetidas$n_registos-1)` linhas excedentes, mas nenhuma linha inteiramente idêntica. Sem documentação adicional, não é possível concluir se estas linhas são parcelas somáveis ou versões parcialmente sobrepostas.
+
+Por prudência, foram excluídas da análise principal as `r length(instituicoes_ambiguas)` instituições com qualquer chave ambígua. A seleção restante contém `r length(instituicoes_estaveis)` instituições com presença nos 24 meses, num total de `r nrow(sns_painel)` linhas. A lista de exclusões e os respetivos registos ficam em `resultados/` para inspeção. Esta estratégia evita mudanças mensais arbitrárias da lista de instituições, mas sacrifica cobertura e pode introduzir enviesamento de seleção.
+
+```{r cobertura}
+knitr::kable(resumo_regiao, digits = 2, col.names = c("Região", "Instituições", "Episódios", "Dias", "Dias/episódio"))
+```
+
+O painel cobre instituições do Norte, Centro, LVT e Alentejo; o Algarve não está representado após esta regra. Não é uma amostra aleatória nem um retrato completo do SNS. As comparações regionais são perfis descritivos das instituições retidas, não taxas populacionais.
+
+## Valores extremos e transformações
+
+São sinalizadas `r nrow(extremos)` células com duração média superior a `r fmt(limite_iqr)` dias, usando o limite Q3 + 1,5 × IQR. Estes valores são mantidos na análise principal: internamentos longos podem ser reais e os dados são agregados. Retirá-los apenas porque são elevados poderia reduzir artificialmente o impacto observado. No modelo, uma sensibilidade separada aprende o limite apenas no treino e mantém o teste completo.
+
+Na ANSR, removem-se títulos, totais e quadros de variações; preservam-se as contagens. As proporções são recalculadas. Não se somam quadros de veículo, via e mês entre si: descrevem as mesmas vítimas em margens diferentes. Não existe informação suficiente para afirmar em que via aconteceram os acidentes dos motociclistas.
+
+## Cruzamento temporal
+
+Os hospitais são agregados a uma linha por mês e a ANSR também tem uma linha por mês. O join usa o mês/ano comum, verifica unicidade das chaves e confirma 24 correspondências. Os internamentos não são repetidos em linhas para mota e carro.
+
+```{r codigo_join, echo=TRUE, eval=FALSE}
+cruzamento <- inner_join(ansr_mensal, sns_mensal, by = "periodo")
+stopifnot(nrow(cruzamento) == 24)
+```
+
+Este join coloca em paralelo a sinistralidade do Continente e as altas por lesões do painel, com coberturas diferentes. Não permite estimar quantos internamentos foram causados por acidentes rodoviários, nem obter tempo de recuperação por veículo.
+
+## Análise exploratória dos dados
+
+### Pergunta 1 — Motociclos versus veículos ligeiros
+
+```{r tab_veiculos}
+knitr::kable(comparacao_veiculos %>% select(ano, veiculo, mortos, feridos_graves, feridos_leves, total_vitimas, proporcao_grave) %>%
+  mutate(proporcao_grave = 100 * proporcao_grave), digits = 2,
+  col.names = c("Ano", "Veículo", "Mortos", "Graves", "Leves", "Total", "Graves/mortos (%)"))
+```
+
+```{r grafico1}
+knitr::include_graphics("resultados/graficos/g1.png")
+```
+
+Em 2024, os motociclos apresentaram `r m24$graves_mortos` vítimas graves ou mortais em `r m24$total_vitimas` vítimas; os veículos ligeiros apresentaram `r l24$graves_mortos` em `r l24$total_vitimas`. A razão de proporções foi `r fmt(comparacao_ratio$razao_proporcoes[comparacao_ratio$ano==2024])`, com uma diferença de `r fmt(comparacao_ratio$diferenca_pp[comparacao_ratio$ano==2024])` pontos percentuais.
+
+```{r tab_ratio}
+knitr::kable(comparacao_ratio %>% select(ano, razao_proporcoes, diferenca_pp), digits = 3,
+  col.names = c("Ano", "Razão de proporções", "Diferença (p.p.)"))
+```
+
+A diferença é uma descrição das vítimas registadas. Não demonstra que usar mota duplica o risco de acidente: seriam necessários dados de exposição, como quilómetros percorridos, viagens ou condutores. Também não ajusta idade, velocidade, tipo de via ou equipamento de proteção. Não se calculam testes com milhares de vítimas tratadas como observações independentes, pois o mesmo acidente pode produzir várias vítimas.
+
+### Pergunta 2 — Gravidade por tipo de via
+
+```{r grafico2}
+knitr::include_graphics("resultados/graficos/g2.png")
+```
+
+Em 2024, a maior proporção observada no quadro de vias foi `r via24$via[1]`, com `r fmt(100*via24$proporcao_grave[1])`%. Esta comparação considera todos os veículos e não permite isolar motas por tipo de via. Diferenças podem refletir velocidade, ocupação, fluxos, tipologia de acidente e outros fatores não observados conjuntamente. A classificação não deve ser convertida numa atribuição de culpa à entidade gestora.
+
+### Pergunta 3 — Perfil dos internamentos por lesões
+
+```{r tab_hospitalar}
+knitr::kable(resumo_hospitalar, digits = 2,
+  col.names = c("Ano", "Episódios", "Dias", "Óbitos", "Dias/episódio"))
+```
+
+```{r grafico3}
+knitr::include_graphics("resultados/graficos/g3.png")
+```
+
+O gráfico compara a razão de dias por episódio em cada faixa etária e sexo. Estas lesões incluem causas rodoviárias e não rodoviárias. A idade é observada por intervalos, não como idade exata, e não se conhece a gravidade clínica de cada episódio. Uma média elevada pode refletir composição de casos, tratamento ou organização hospitalar.
+
+### Pergunta 4 — Associação temporal entre as fontes
+
+```{r grafico4}
+knitr::include_graphics("resultados/graficos/g4.png")
+```
+
+As séries foram convertidas num índice com média dos 24 meses igual a 100, para comparar a forma da evolução sem usar dois eixos com unidades distintas.
+
+```{r grafico5}
+knitr::include_graphics("resultados/graficos/g5.png")
+```
+
+```{r tab_cor}
+knitr::kable(associacoes, digits = 3,
+  col.names = c("Período", "Meses", "Spearman: episódios", "Spearman: dias"))
+```
+
+A correlação de Spearman dos feridos graves com os dias do painel foi `r fmt(rho,3)` nos 24 meses. Valores por ano ajudam a verificar se a associação global depende da diferença entre 2023 e 2024. Uma correlação próxima de zero sugere pouca associação monotónica nesta seleção; uma correlação positiva ou negativa descreve apenas o acompanhamento das séries.
+
+
+
+```{r tab_sens}
+knitr::kable(sensibilidade, digits = 3, col.names = c("Cenário", "Spearman: dias"))
+```
+
+O cenário de todas as linhas serve para mostrar o efeito de uma política alternativa de agregação; pode incluir sobrecontagem e não constitui uma estimativa oficial do total nacional. Se a associação variar entre cenários, a conclusão deve explicitar essa sensibilidade.
+
+## Estratégia de análise para M4
+
+A etapa seguinte utiliza uma regressão linear ponderada para estimar a duração média dos internamentos por célula hospitalar. Os preditores são faixa etária, sexo, região e sazonalidade. O treino usa 2023 e o teste usa 2024, com comparação à média ponderada de 2023. A avaliação considera MAE e RMSE em dias por célula. Uma análise adicional examina a associação temporal com ajuste por tendência e sazonalidade. Estes modelos estudam grupos e séries, sem estabelecer causalidade individual.
+
+# Referências
+
+AUTORIDADE NACIONAL DE SEGURANÇA RODOVIÁRIA. *Relatório Anual de Sinistralidade 24h e fiscalização rodoviária de 2024* e respetivo anexo Excel. 2025. Disponível em: <https://observatorioansr.pt/relatorios/>. Acesso em: 6 out. 2026.
+
+ADMINISTRAÇÃO CENTRAL DO SISTEMA DE SAÚDE. *Morbilidade e Mortalidade Hospitalar*. Portal Transparência SNS, identificador `morbilidade_mortalidade_hospit`. Disponível em: <https://transparencia.sns.gov.pt/explore/assets/morbilidade_mortalidade_hospit/>. Acesso em: 6 out. 2026.
+
+GOUVEIA, Luis Borges. *Guião de projeto: Seminário de Sistemas e Aplicações*. UFP, v. 1.2, set. 2026. Documento fornecido na unidade curricular.
+
+R CORE TEAM. *R: Fitting Linear Models — lm*. Documentação do R. Disponível em: <https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html>. Acesso em: 6 out. 2026.
+
+POSIT. *Tutorial: Hello, Quarto / RStudio*. Disponível em: <https://quarto.org/docs/get-started/hello/rstudio.html>. Acesso em: 6 out. 2026.
+

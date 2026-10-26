@@ -1,0 +1,6 @@
+{
+  "ansr_2024.xlsx": "https://observatorioansr.pt/wp-content/uploads/2025/08/Anexo-ao-Relatorio-Anual-de-Sinistralidade-24h-e-fiscalizacao-rodoviaria-2024.xlsx",
+  "sns_metadados.json": "https://transparencia.sns.gov.pt/api/explore/v2.1/catalog/datasets/morbilidade_mortalidade_hospit",
+  "sns_amostra.json": "https://transparencia.sns.gov.pt/api/explore/v2.1/catalog/datasets/morbilidade_mortalidade_hospit/records?limit=5&where=periodo%20%3E%3D%20%272023-01%27%20and%20periodo%20%3C%3D%20%272024-12%27%20and%20cod_capitulo%20%3D%2019",
+  "sns_lesoes_2023_2024.csv": "https://transparencia.sns.gov.pt/api/explore/v2.1/catalog/datasets/morbilidade_mortalidade_hospit/exports/csv?where=periodo+%3E%3D+%272023-01%27+and+periodo+%3C%3D+%272024-12%27+and+cod_capitulo+%3D+19&use_labels=false&delimiter=%3B"
+}

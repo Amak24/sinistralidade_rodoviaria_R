@@ -1,0 +1,14 @@
+VERIFICAÇÃO DESTA CÓPIA DO PROJETO
+
+Análise executada em R 4.3.3, Linux, em sessão nova.
+Comando testado: source("INICIAR_AQUI.R", encoding = "UTF-8")
+
+- Instalação/carregamento dos sete pacotes: concluído.
+- M2, M3 e M4: execução concluída.
+- Nove ficheiros de resultados: coincidem com a referência (tolerância 1e-7).
+- Seis gráficos PNG: exportados e verificados.
+- Ficheiros originais: hashes SHA-256 conferidos com o manifesto.
+
+O registo de versões está em resultados/sessionInfo.txt.
+No Mac, a primeira execução instala os pacotes em falta e exige Internet.
+A verificação descrita refere-se aos cálculos e gráficos da análise em R.

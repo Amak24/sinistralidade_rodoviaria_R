@@ -1,0 +1,30 @@
+{
+  "data_aquisicao": "2026-10-06",
+  "ficheiros": [
+    {
+      "ficheiro": "ansr_2024.xlsx",
+      "bytes": 239515,
+      "sha256": "58b5dd37ae2c8fa0e6d66cdae904164b7e66a77710fec50349c920c958be4383"
+    },
+    {
+      "ficheiro": "sns_amostra.json",
+      "bytes": 1952,
+      "sha256": "94402d0afef6677a39dfc3906cac2a73dd487f6b0853c0c183865c662d0a3802"
+    },
+    {
+      "ficheiro": "sns_lesoes_2023_2024.csv",
+      "bytes": 1903085,
+      "sha256": "e664614a37e7bf6b2f9737ce02614e81320671d14a3b0a988a7b0e35be1a09b6"
+    },
+    {
+      "ficheiro": "sns_metadados.json",
+      "bytes": 11882,
+      "sha256": "be09e6e90fed2030f481b28bba023745d723301c016da22f30e795c1e195f227"
+    },
+    {
+      "ficheiro": "urls_fontes.json",
+      "bytes": 805,
+      "sha256": "c44bd7f94ebf65f0b4bcdd321209efcd77a2080a57e75cbfe7a2d1bef29484b4"
+    }
+  ]
+}

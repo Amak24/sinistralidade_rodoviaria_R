@@ -1,0 +1,489 @@
+periodo,regiao,instituicao,cod_capitulo,faixa_etaria,sexo,n_registos
+2023-01-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,M,2
+2023-01-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[25-45[,M,2
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,3
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,3
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2023-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2023-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2023-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,2
+2023-01-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2023-02-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,F,2
+2023-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2023-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2023-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,2
+2023-02-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-03-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,M,2
+2023-03-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2023-03-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2023-03-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[65-120[,F,2
+2023-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,3
+2023-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-03-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[65-120[,F,2
+2023-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2023-03-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2023-04-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[25-45[,M,2
+2023-04-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2023-04-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Almada / Seixal, E.P.E.",19,[25-45[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2023-04-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,F,2
+2023-05-01,Centro,"Unidade Local de Saúde do Baixo Mondego, E.P.E.",19,[45-65[,F,2
+2023-05-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[45-65[,M,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2023-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2023-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2023-05-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2023-05-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-05-01,Norte,"Unidade Local de Saúde de Gaia / Espinho, E.P.E.",19,[25-45[,M,2
+2023-06-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2023-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,3
+2023-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2023-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2023-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2023-06-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,3
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,2
+2023-07-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,F,2
+2023-07-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-08-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[25-45[,M,2
+2023-08-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[65-120[,F,2
+2023-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[1-5[,M,2
+2023-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,2
+2023-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2023-08-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[65-120[,M,2
+2023-09-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2023-09-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[65-120[,M,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,M,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-09-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,3
+2023-09-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2023-09-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-10-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,F,2
+2023-10-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[1-5[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2023-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2023-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2023-10-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[15-25[,M,2
+2023-10-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-11-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-11-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2023-11-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[1-5[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2023-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2023-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2023-11-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,2
+2023-11-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2023-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2023-12-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,3
+2024-01-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-01-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,M,2
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-01-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,3
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,3
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,3
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,3
+2024-01-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,3
+2024-01-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,M,2
+2024-01-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-01-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2024-01-01,Norte,"Unidade Local de Saúde de Gaia / Espinho, E.P.E.",19,[65-120[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,3
+2024-02-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,3
+2024-02-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,2
+2024-02-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,3
+2024-02-01,Norte,"Unidade Local de Saúde de Gaia / Espinho, E.P.E.",19,[65-120[,M,2
+2024-03-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,F,2
+2024-03-01,Centro,"Unidade Local de Saúde de Coimbra, E.P.E.",19,[5-15[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[1-5[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Lisboa Ocidental, E.P.E.",19,[45-65[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[45-65[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[0-1[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,3
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,3
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,3
+2024-03-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-03-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[5-15[,F,2
+2024-03-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-03-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[65-120[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[45-65[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[65-120[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[1-5[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-04-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,M,3
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,3
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,2
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,3
+2024-04-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-04-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,3
+2024-04-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,3
+2024-04-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[45-65[,M,2
+2024-04-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[65-120[,F,2
+2024-05-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,M,2
+2024-05-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2024-05-01,LVT,Hospital de Cascais Dr. José de Almeida,19,[65-120[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde da Lezíria, E.P.E.",19,[45-65[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[0-1[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,3
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-05-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,3
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2024-05-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,3
+2024-05-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2024-05-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2024-06-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,M,2
+2024-06-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2024-06-01,Centro,"Unidade Local de Saúde de Coimbra, E.P.E.",19,[0-1[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[0-1[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Lisboa Ocidental, E.P.E.",19,[45-65[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[65-120[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,3
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,3
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,3
+2024-06-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2024-06-01,LVT,"Unidade Local de Saúde do Estuário do Tejo, E.P.E.",19,[65-120[,F,2
+2024-06-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[1-5[,M,2
+2024-06-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-06-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[65-120[,M,2
+2024-07-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[45-65[,M,2
+2024-07-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,F,2
+2024-07-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[1-5[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de Loures / Odivelas, E.P.E.",19,[65-120[,F,2
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,3
+2024-07-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-07-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[15-25[,M,2
+2024-07-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,F,2
+2024-07-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2024-07-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[65-120[,M,2
+2024-08-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,F,2
+2024-08-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,M,2
+2024-08-01,Algarve,"Unidade Local de Saúde do Algarve, E.P.E.",19,[15-25[,M,2
+2024-08-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de Almada / Seixal, E.P.E.",19,[45-65[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[1-5[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-08-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[0-1[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,F,3
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-08-01,LVT,"Unidade Local de Saúde do Oeste, E.P.E.",19,[65-120[,F,2
+2024-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,M,2
+2024-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,2
+2024-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2024-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-08-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,M,2
+2024-08-01,Norte,"Unidade Local de Saúde de Gaia / Espinho, E.P.E.",19,[5-15[,M,2
+2024-09-01,Algarve,"Unidade Local de Saúde do Algarve, E.P.E.",19,[25-45[,M,2
+2024-09-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[25-45[,M,2
+2024-09-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,F,2
+2024-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[15-25[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[65-120[,F,2
+2024-09-01,LVT,"Unidade Local de Saúde de Lisboa Ocidental, E.P.E.",19,[45-65[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,2
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,3
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,M,3
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-09-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,3
+2024-09-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-09-01,LVT,"Unidade Local de Saúde do Estuário do Tejo, E.P.E.",19,[65-120[,M,2
+2024-09-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,F,2
+2024-09-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[5-15[,M,2
+2024-09-01,Norte,"Unidade Local de Saúde de Gaia / Espinho, E.P.E.",19,[65-120[,M,2
+2024-09-01,Norte,"Unidade Local de Saúde de Santo António, E.P.E.",19,[45-65[,M,2
+2024-10-01,Algarve,"Unidade Local de Saúde do Algarve, E.P.E.",19,[65-120[,M,3
+2024-10-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[25-45[,M,2
+2024-10-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de Almada / Seixal, E.P.E.",19,[15-25[,F,2
+2024-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[25-45[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[5-15[,F,2
+2024-10-01,LVT,"Unidade Local de Saúde de Lisboa Ocidental, E.P.E.",19,[45-65[,F,2
+2024-10-01,LVT,"Unidade Local de Saúde de Lisboa Ocidental, E.P.E.",19,[45-65[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-10-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,3
+2024-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,2
+2024-10-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2024-10-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,M,2
+2024-10-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2024-10-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-11-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[15-25[,F,2
+2024-11-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,F,2
+2024-11-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,M,2
+2024-11-01,Alentejo,"Unidade Local de Saúde do Baixo Alentejo, E.P.E.",19,[45-65[,F,2
+2024-11-01,Alentejo,"Unidade Local de Saúde do Litoral Alentejano, E.P.E.",19,[65-120[,F,2
+2024-11-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[45-65[,F,2
+2024-11-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,F,2
+2024-11-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde da Lezíria, E.P.E.",19,[25-45[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde de Almada / Seixal, E.P.E.",19,[65-120[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-11-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[15-25[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2024-11-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-11-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[15-25[,M,2
+2024-11-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[45-65[,M,2
+2024-11-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2
+2024-12-01,Alentejo,"Unidade Local de Saúde do Alentejo Central, E.P.E.",19,[65-120[,M,2
+2024-12-01,Algarve,"Unidade Local de Saúde do Algarve, E.P.E.",19,[65-120[,F,2
+2024-12-01,Centro,"Unidade Local de Saúde da Cova da Beira, E.P.E.",19,[65-120[,M,2
+2024-12-01,Centro,"Unidade Local de Saúde de Coimbra, E.P.E.",19,[65-120[,F,2
+2024-12-01,LVT,"Unidade Local de Saúde de Almada / Seixal, E.P.E.",19,[45-65[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde de Amadora / Sintra, E.P.E.",19,[45-65[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,F,2
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[15-25[,M,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,F,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[25-45[,M,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,F,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[45-65[,M,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[5-15[,F,2
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,F,3
+2024-12-01,LVT,"Unidade Local de Saúde de Santa Maria, E.P.E.",19,[65-120[,M,3
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[1-5[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[25-45[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,F,2
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[45-65[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[5-15[,M,3
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,F,2
+2024-12-01,LVT,"Unidade Local de Saúde de São José, E.P.E.",19,[65-120[,M,2
+2024-12-01,LVT,"Unidade Local de Saúde do Estuário do Tejo, E.P.E.",19,[45-65[,F,2
+2024-12-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[25-45[,M,2
+2024-12-01,Norte,"Unidade Local de Saúde de Braga, E.P.E.",19,[65-120[,F,2

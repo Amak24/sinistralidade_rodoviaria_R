@@ -1,0 +1,12 @@
+variavel,classe_R
+periodo,character
+regiao,character
+instituicao,character
+cod_capitulo,numeric
+desc_capitulo,character
+faixa_etaria,character
+sexo,character
+internamentos,numeric
+dias_internamentos,numeric
+ambulatorios,numeric
+obitos,numeric

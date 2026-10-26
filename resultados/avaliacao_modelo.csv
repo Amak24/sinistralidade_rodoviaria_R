@@ -1,0 +1,4 @@
+modelo,MAE_dias,RMSE_dias,n_celulas_teste
+Regressão ponderada,2.950221415114473,4.784646302093949,2424
+Referência: média de 2023,3.728857970155321,5.405980472852342,2424
+Sensibilidade: treino sem extremos,2.9321089428382274,4.798550137530657,2424

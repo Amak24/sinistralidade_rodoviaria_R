@@ -1,0 +1,3 @@
+Pasta reservada para os HTML opcionais.
+Na Console do RStudio: source("gerar_documentos.R", encoding = "UTF-8")
+Os relatórios e apresentações editados no Pages/Word/PowerPoint são entregues separadamente.

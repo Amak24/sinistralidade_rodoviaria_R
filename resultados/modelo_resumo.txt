@@ -1,0 +1,31 @@
+
+Call:
+lm(formula = duracao_media ~ faixa_etaria + sexo + regiao + sin_mes + 
+    cos_mes, data = treino, weights = internamentos)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-46.679  -7.143  -2.715   3.458 159.501 
+
+Coefficients:
+                     Estimate Std. Error t value      Pr(>|t|)    
+(Intercept)           6.14608    2.01509   3.050       0.00231 ** 
+faixa_etaria[1-5[    -0.97576    2.16103  -0.452       0.65165    
+faixa_etaria[15-25[  -1.39339    1.98811  -0.701       0.48346    
+faixa_etaria[25-45[  -0.23334    1.96572  -0.119       0.90552    
+faixa_etaria[45-65[   2.53653    1.95721   1.296       0.19510    
+faixa_etaria[5-15[   -3.63143    2.02046  -1.797       0.07241 .  
+faixa_etaria[65-120[  5.85729    1.95309   2.999       0.00274 ** 
+sexoM                 1.02916    0.16984   6.060 0.00000000158 ***
+regiaoCentro          0.10892    0.51989   0.210       0.83406    
+regiaoLVT            -0.24182    0.54377  -0.445       0.65657    
+regiaoNorte           0.23577    0.50441   0.467       0.64024    
+sin_mes              -0.09272    0.11460  -0.809       0.41858    
+cos_mes              -0.13302    0.11475  -1.159       0.24652    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.59 on 2394 degrees of freedom
+Multiple R-squared:  0.2993,	Adjusted R-squared:  0.2958 
+F-statistic: 85.22 on 12 and 2394 DF,  p-value: < 0.00000000000000022
+

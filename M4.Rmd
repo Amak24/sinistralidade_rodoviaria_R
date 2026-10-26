@@ -1,0 +1,129 @@
+---
+title: "M4 Demonstração da solução e interpretação crítica"
+subtitle: "Sinistralidade rodoviária e internamentos por lesões"
+author: "Amak Adriano Evaristo Machava"
+date: "25 de outubro de 2026"
+output:
+  html_document:
+    toc: true
+    self_contained: true
+  word_document:
+    toc: true
+---
+
+```{r preparacao, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                     fig.width = 9, fig.height = 5, dpi = 160)
+source("executar_M4.R", encoding = "UTF-8")
+source("R/06_exportar_graficos.R", encoding = "UTF-8")
+exportar_graficos(6)
+source("config/ler_repositorio.R", encoding = "UTF-8")
+repo_url <- ler_repositorio()
+fmt <- function(x, d = 2) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = " ")
+v24 <- comparacao_veiculos %>% filter(ano == 2024)
+m24 <- v24 %>% filter(veiculo == "Motociclos")
+l24 <- v24 %>% filter(veiculo == "Veículos ligeiros")
+via24 <- ansr_vias %>% filter(ano == 2024) %>% arrange(desc(proporcao_grave))
+rho <- associacoes$rho_dias[associacoes$periodo_analise == "Total"]
+melhoria_mae <- 100 * (1 - avaliacao$MAE_dias[1] / avaliacao$MAE_dias[2])
+coef_fg <- coef(associacao_ajustada)["feridos_graves"]
+```
+
+# M4 Demonstração da solução resultados e interpretação crítica
+
+## Análise aprofundada da associação temporal
+
+A regressão descritiva ajustada por tendência linear e seno/cosseno do mês produziu um coeficiente de `r fmt(coef_fg,3)` dias hospitalares por unidade adicional de feridos graves na série continental. Este coeficiente não tem interpretação clínica individual. Existem apenas 24 meses, cobertura incompleta e possível dependência temporal. Por isso não se apresentam os p-values usuais como prova confirmatória.
+
+## Modelação e avaliação
+
+A modelação responde à componente preditiva de Pergunta 3: estimar a média de dias hospitalares por célula, respeitando a unidade agregada disponível. É usada uma regressão linear ponderada por número de episódios, com faixa etária, sexo, região e sazonalidade mensal. O modelo foi ajustado em 2023 e avaliado nas células elegíveis de 2024.
+
+```{r codigo_modelo, echo=TRUE, eval=FALSE}
+modelo <- lm(duracao_media ~ faixa_etaria + sexo + regiao + sin_mes + cos_mes,
+             data = treino, weights = internamentos)
+teste$previsao <- predict(modelo, newdata = teste)
+```
+
+A separação temporal evita misturar aleatoriamente o mesmo período entre treino e teste. Como são as mesmas instituições em anos diferentes, a avaliação mede transferência para o ano seguinte no mesmo painel; não mede desempenho em hospitais novos. O modelo não inclui ano, veículo nem medidas hospitalares posteriores como preditores do próprio resultado.
+
+Compara-se o modelo a uma referência que prevê sempre a duração média ponderada de 2023. São usados MAE e RMSE ponderados, em dias por célula. Estes erros não são calculados a partir de durações individuais de pacientes. O peso de episódios dá mais relevância a células com maior volume, mas não resolve todas as diferenças de variância e dependência entre instituições.
+
+```{r avaliacao}
+knitr::kable(avaliacao, digits = 3,
+  col.names = c("Método", "MAE (dias)", "RMSE (dias)", "Células de teste"))
+```
+
+O MAE do modelo principal foi `r fmt(avaliacao$MAE_dias[1],3)` dias e o da referência foi `r fmt(avaliacao$MAE_dias[2],3)` dias. A variação relativa foi `r fmt(melhoria_mae)`% (`r if(melhoria_mae > 0) "redução do erro" else "aumento do erro"`). A escolha final deve seguir o desempenho observado; um modelo mais complexo não é automaticamente melhor.
+
+```{r grafico6}
+knitr::include_graphics("resultados/graficos/g6.png")
+```
+
+O gráfico mostra dispersão entre médias previstas e observadas. Valores extremos são usados nas métricas, embora o eixo de apresentação seja limitado ao percentil 99. A tabela de previsões guarda todos os casos. A análise de sensibilidade refaz o treino sem médias acima do limite IQR de 2023 e avalia o mesmo teste, sem remover os erros difíceis de 2024.
+
+A regressão linear pode produzir durações negativas fora do domínio observado. Nesta execução foram identificadas `r sum(teste$previsao < 0)` previsões negativas. A ausência de negativos neste teste não garante validade futura. Distribuições assimétricas, gravidade clínica desconhecida e dependência por hospital limitam o modelo; os coeficientes são descritivos e não provas de causalidade.
+
+## Discussão e apoio à decisão
+
+Pergunta 1 mostra uma diferença entre categorias de veículos entre as vítimas registadas. Este resultado justifica priorizar a análise da proteção de motociclistas, sem substituir um estudo de exposição ao trânsito. Pergunta 2 identifica vias com consequências proporcionalmente mais graves, que podem orientar auditorias e recolha de informação adicional. Pergunta 3 mostra perfis hospitalares e permite testar um modelo com avaliação fora do ano de treino. Pergunta 4 examina uma possível associação de contexto, mas não faz ligação clínica entre as fontes.
+
+| Evidência disponível | Decisão que pode apoiar | Informação adicional necessária |
+|:--|:--|:--|
+| Maior proporção de consequências graves em motociclos | Priorizar campanhas e estudo de proteção de motociclistas. | Exposição, equipamento, velocidade e características individuais. |
+| Diferenças por tipo de via | Selecionar vias para análise técnica e auditorias. | Tráfego, extensão, velocidade e localização dos acidentes. |
+| Diferenças nas médias hospitalares agregadas | Investigar necessidades de cuidados nos grupos observados. | Diagnóstico detalhado, gravidade e processos de alta. |
+| Associação temporal entre séries | Formular hipóteses para estudos de ligação de dados. | Identificação de causa externa e cobertura comparável. |
+
+ANSR e forças de segurança podem usar resultados para formular prioridades de prevenção; gestores de vias para orientar investigações de infraestrutura; entidades de saúde para formular perguntas sobre utilização hospitalar. Estas são entidades com capacidade de intervenção, não responsáveis culpados identificados pelo modelo. Não se conclui que uma campanha específica reduzirá acidentes sem avaliar a intervenção.
+
+## Conclusões
+
+**Pergunta 1:** em 2024, a proporção de vítimas graves ou mortais foi superior nos motociclos (`r fmt(100*m24$proporcao_grave)`%) à dos veículos ligeiros (`r fmt(100*l24$proporcao_grave)`%), numa razão de `r fmt(comparacao_ratio$razao_proporcoes[comparacao_ratio$ano==2024])`. O resultado refere-se às vítimas registadas e não ao risco por pessoa exposta.
+
+**Pergunta 2:** o quadro por tipo de via apresenta diferenças na proporção de consequências graves. Em 2024, `r via24$via[1]` apresentou a maior proporção neste quadro. Não é possível atribuir essa diferença exclusivamente à via nem isolar nela os motociclos.
+
+**Pergunta 3:** os dados hospitalares permitem comparar duração média por grupos e ajustar um modelo agregado. O teste temporal apresentou MAE de `r fmt(avaliacao$MAE_dias[1],3)` dias, comparado com `r fmt(avaliacao$MAE_dias[2],3)` dias na referência. Este resultado caracteriza a previsão de médias de células no painel; não estima a recuperação individual.
+
+**Pergunta 4:** foi possível cruzar 24 meses das duas fontes, com Spearman de `r fmt(rho,3)` entre feridos graves e dias por lesões. A associação global é fraca e muda de sinal no cenário que soma todas as linhas. Não foi identificada uma relação temporal robusta neste recorte. Isso não demonstra ausência de impacto clínico dos acidentes: as lesões hospitalares têm várias causas e as coberturas diferem. Não é possível quantificar o impacto específico das motas ou carros.
+
+A principal contribuição do projeto é um processo reprodutível de Ciência de Dados com fontes oficiais, diagnóstico de qualidade, preparação justificada, comparação de proporções, exploração visual e modelação avaliada. A identificação de uma limitação de dados é também um resultado relevante: impede conclusões que as fontes públicas não sustentam.
+
+## Limitações e trabalho futuro
+
+As principais limitações são a agregação dos dados, a ausência de causa externa por veículo no SNS, a seleção não aleatória do painel, a exclusão do Algarve, diferenças entre mês do acidente e mês de alta, dados ANSR de 2024 provisórios na edição utilizada, ausência de exposição ao trânsito e apenas dois anos de observação. As altas não representam todas as lesões ocorridas no mês; a codificação pode ter atrasos e revisões.
+
+As mesmas instituições aparecem em vários meses. A regressão descritiva e as métricas ponderadas não corrigem integralmente essa dependência. Não há dados individuais de alta com recuperação, sequelas, reabilitação ou retorno ao trabalho. Também não há uma ligação entre vítimas e episódios: internamento não equivale a pessoa única.
+
+Como trabalho futuro, deve esclarecer-se com o produtor a origem das chaves repetidas, aumentar o período temporal, obter categorias de causas externas relacionadas com transportes, estudar modelos positivos para médias e ajustar a dependência por instituição. Uma ligação entre dados rodoviários e clínicos só deve ser considerada com acesso autorizado e critérios de correspondência documentados. Para comparar riscos de veículos seriam necessários denominadores de exposição.
+
+# Referências
+
+AUTORIDADE NACIONAL DE SEGURANÇA RODOVIÁRIA. *Relatório Anual de Sinistralidade 24h e fiscalização rodoviária de 2024* e respetivo anexo Excel. 2025. Disponível em: <https://observatorioansr.pt/relatorios/>. Acesso em: 6 out. 2026.
+
+ADMINISTRAÇÃO CENTRAL DO SISTEMA DE SAÚDE. *Morbilidade e Mortalidade Hospitalar*. Portal Transparência SNS, identificador `morbilidade_mortalidade_hospit`. Disponível em: <https://transparencia.sns.gov.pt/explore/assets/morbilidade_mortalidade_hospit/>. Acesso em: 6 out. 2026.
+
+GOUVEIA, Luis Borges. *Guião de projeto: Seminário de Sistemas e Aplicações*. UFP, v. 1.2, set. 2026. Documento fornecido na unidade curricular.
+
+R CORE TEAM. *R: Fitting Linear Models — lm*. Documentação do R. Disponível em: <https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html>. Acesso em: 6 out. 2026.
+
+POSIT. *Tutorial: Hello, Quarto / RStudio*. Disponível em: <https://quarto.org/docs/get-started/hello/rstudio.html>. Acesso em: 6 out. 2026.
+
+# Anexo A Organização técnica e reprodutibilidade
+
+Os momentos de entrega integram um único estudo: M1 apresenta o domínio e a motivação; M2 delimita o problema e identifica os dados; M3 prepara e explora a informação; M4 reúne a modelação, a interpretação e as conclusões.
+
+| Componente | Ficheiro ou pasta | Conteúdo |
+|:--|:--|:--|
+| M1 | `M1_uma_pagina.Rmd` | Enquadramento e proposta inicial. |
+| M2 | `M2.Rmd` e `executar_M2.R` | Perguntas, dados disponíveis, dicionário e importação. |
+| M3 | `M3.Rmd` e `executar_M3.R` | Auditoria, preparação, dados limpos e exploração visual. |
+| M4 | `M4.Rmd` e `executar_M4.R` | Modelação, avaliação e conclusões. |
+| Fontes preservadas | `data/raw/` | Ficheiros oficiais e metadados da aquisição. |
+| Dados preparados | `data/processed/` | Tabelas analíticas e cruzamento mensal. |
+| Código R | `R/` | Ambiente, importação, limpeza, exploração e modelação. |
+| Resultados | `resultados/` | Auditorias, tabelas, gráficos, previsões e informação de sessão. |
+
+A execução utiliza caminhos relativos. Os dados originais estão preservados para permitir reproduzir a análise com a mesma versão das fontes. O controlo de versões é feito com Git. A sequência de execução é M2, M3 e M4; o ficheiro `executar.R` executa o fluxo completo. Os documentos R Markdown integram código, texto, tabelas e gráficos.
+
+`r if (nzchar(repo_url)) paste0("O repositório do projeto está disponível em: ", repo_url, ".") else ""`

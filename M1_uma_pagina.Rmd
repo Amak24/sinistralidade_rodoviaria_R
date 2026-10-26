@@ -1,0 +1,35 @@
+---
+title: "M1 Introdução do projeto"
+subtitle: "Sinistralidade rodoviária e internamentos por lesões"
+author: "Amak Adriano Evaristo Machava"
+date: "25 de outubro de 2026"
+output:
+  html_document:
+    self_contained: true
+  word_document: default
+---
+
+# Domínio e tema
+
+Ciência de Dados aplicada à segurança rodoviária e à saúde. O estudo compara a gravidade das vítimas em motociclos e veículos ligeiros e explora o contexto dos internamentos por lesões em Portugal continental.
+
+# Problema e objetivo
+
+O número de acidentes não mostra, por si só, a gravidade das consequências. O objetivo é comparar a proporção de vítimas graves ou mortais e estudar padrões hospitalares e associações temporais que possam apoiar prioridades de prevenção e investigação.
+
+# Motivação
+
+A análise de dados oficiais permite compreender o problema para além das contagens de ocorrências. A comparação de consequências e a identificação de padrões podem orientar perguntas sobre prevenção e utilização de recursos de saúde.
+
+# Fontes e âmbito
+
+Usam-se o anexo do relatório anual da ANSR de 2024, com quadros de 2023–2024, e o conjunto Morbilidade e Mortalidade Hospitalar do Portal Transparência SNS, publicado pela ACSS. O recorte hospitalar considera o capítulo 19 de lesões, envenenamentos e outras consequências de causas externas.
+
+# Abordagem e ferramentas
+
+O processo inclui recolha, auditoria, preparação, exploração, cruzamento temporal e modelação. Utilizam-se R, RStudio, readr, readxl, dplyr, tidyr, ggplot2, R Markdown e Git.
+
+# Resultados esperados e limites
+
+Pretende-se comparar proporções de gravidade, explorar médias hospitalares por grupos e avaliar uma associação temporal entre fontes. Os dados públicos não ligam cada internamento a um veículo e não medem recuperação individual. A duração de internamento é um indicador diferente do tempo total de recuperação.
+

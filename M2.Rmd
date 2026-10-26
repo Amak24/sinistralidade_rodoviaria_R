@@ -1,0 +1,124 @@
+---
+title: "M2 Delimitação do problema e identificação de dados"
+subtitle: "Sinistralidade rodoviária e internamentos por lesões"
+author: "Amak Adriano Evaristo Machava"
+date: "25 de outubro de 2026"
+output:
+  html_document:
+    toc: true
+    number_sections: false
+    self_contained: true
+  word_document:
+    toc: true
+---
+
+```{r preparacao, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 9, fig.height = 5, dpi = 160)
+source("executar_M2.R", encoding = "UTF-8")
+source("config/ler_repositorio.R", encoding = "UTF-8")
+repo_url <- ler_repositorio()
+fmt <- function(x, d = 2) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = " ")
+```
+
+**Universidade Fernando Pessoa - Seminário de Sistemas e Aplicações - 2026/2027**
+
+`r if (nzchar(repo_url)) paste0("**Repositório GitHub:** ", repo_url) else ""`
+
+# Problema e objetivo
+
+**Problema:** compreender as diferenças na proporção de consequências graves entre vítimas em motociclos e veículos ligeiros, e explorar padrões de internamento por lesões.
+
+**Objetivo:** comparar a gravidade rodoviária e identificar padrões hospitalares e associações temporais que possam apoiar prioridades de prevenção e investigação.
+
+# M2 Delimitação do problema perguntas analíticas e identificação de dados
+
+## Perguntas de investigação e âmbito
+
+| Pergunta | Dados e método | O que permite concluir |
+|:--|:--|:--|
+| Pergunta 1. A proporção de vítimas graves ou mortais difere entre motociclos e veículos ligeiros em 2023–2024? | ANSR: proporções, diferença em pontos percentuais e razão de proporções, por ano. | Comparação entre vítimas registadas; sem risco por condutor ou quilómetro. |
+| Pergunta 2. Como varia a proporção de consequências graves entre tipos de via? | ANSR: cruzamento via × categorias de gravidade, com comparação proporcional. | Padrões por via para todos os veículos; sem ajuste por velocidade ou exposição. |
+| Pergunta 3. Como varia a duração média do internamento por lesões com idade, sexo e região, e pode um modelo antecipar médias de 2024? | SNS: razões de totais e regressão ponderada, treino em 2023 e teste em 2024. | Padrões e previsões por célula agregada do painel. |
+| Pergunta 4. A sinistralidade grave mensal acompanha a utilização hospitalar por lesões nas instituições selecionadas? | Join por mês, correlação de Spearman e regressão descritiva com tendência e sazonalidade. | Associação de séries; sem atribuir internamentos a acidentes. |
+
+O período comum é janeiro de 2023 a dezembro de 2024. A ANSR apresenta dados detalhados do Continente com critério de vítimas a 24 horas. Não se misturam estes valores com relatórios a 30 dias. A categoria de comparação disponível é **veículos ligeiros**: não se afirma que todos são automóveis ligeiros de passageiros. Os ciclomotores ficam separados dos motociclos.
+
+A fonte hospitalar refere-se ao mês de **alta**, enquanto a ANSR se refere ao mês do acidente. Mesmo uma vítima internada após um acidente pode ter alta num mês diferente. O cruzamento é, portanto, ecológico: compara períodos, sem identificar pessoas comuns às fontes.
+
+## Metodologia e dados
+
+### Fontes e unidade de observação
+
+A ANSR disponibiliza o anexo ao Relatório Anual de Sinistralidade a 24 horas de 2024. Foram usados três quadros: quadro 4, contagens mensais; quadro 13, tipo de via; quadro 19, vítimas por veículo. Cada um contém comparações com 2023. O ficheiro tem títulos, células unidas e quadros de percentagens, exigindo extração estrutural. O relatório de 2024 identifica os dados desse ano como provisórios à data da edição; essa qualificação é preservada.
+
+O conjunto SNS `morbilidade_mortalidade_hospit`, publicado pela ACSS, contém episódios, dias e óbitos por mês de alta, instituição, região, capítulo do diagnóstico principal, faixa etária e sexo. A aquisição foi filtrada para 2023–2024 e para o capítulo 19: **Lesões, envenenamento e algumas outras consequências de causas externas**. Não foram usados os conjuntos trimestrais de taxas com nomes semelhantes.
+
+Uma linha SNS é um **registo agregado**, não um doente nem um acidente. O recorte descarregado tem `r nrow(sns_raw)` linhas e 11 colunas. A seleção das instituições e a preparação analítica são apresentadas em M3. Período, instituição, região, idade, sexo, internamentos, dias, ambulatório e óbitos fornecem pelo menos oito variáveis relevantes com tipos diferentes. Código e descrição do capítulo são constantes neste recorte e não são apresentados como preditores informativos.
+
+### Dicionário de dados
+
+| Variável original SNS | Tipo | Significado e utilização |
+|:--|:--|:--|
+| `periodo` | Texto convertido em data mensal | Ano/mês de alta; chave temporal do cruzamento. |
+| `regiao` | Categórica | Região da instituição; não residência do doente. |
+| `instituicao` | Categórica | Instituição hospitalar; seleção e cobertura do painel. |
+| `cod_capitulo` | Código | Capítulo do diagnóstico; filtro 19. |
+| `desc_capitulo` | Texto | Descrição do capítulo; validação do filtro. |
+| `faixa_etaria` | Categórica ordenável | Intervalo de idade, por exemplo [15–25[. |
+| `sexo` | Categórica | Sexo publicado: F ou M. |
+| `internamentos` | Numérica discreta | Número de episódios de internamento. |
+| `dias_internamentos` | Numérica discreta | Total de dias associado aos episódios publicados. |
+| `ambulatorios` | Numérica discreta | Episódios de ambulatório; controlo da estrutura, fora do denominador da duração. |
+| `obitos` | Numérica discreta | Episódios com destino de alta falecido; não causa de morte rodoviária. |
+
+| Variável ANSR/derivada | Tipo | Definição |
+|:--|:--|:--|
+| `ano`, `mes`, `periodo` | Tempo | Período do acidente nas tabelas ANSR. |
+| `veiculo`, `via` | Categóricas | Categorias em quadros distintos, sem combinação veículo × via. |
+| `acidentes` | Contagem | Acidentes com vítimas. |
+| `mortos`, `feridos_graves`, `feridos_leves` | Contagens | Categorias do critério ANSR a 24h. |
+| `total_vitimas` | Contagem | Mortos + feridos graves + feridos leves. |
+| `proporcao_grave` | Numérica contínua | (Mortos + feridos graves) / total de vítimas. |
+| `duracao_media` | Numérica contínua | Dias de internamento / episódios; indefinida quando episódios = 0. |
+| `sin_mes`, `cos_mes` | Numéricas contínuas | Representação simples da sazonalidade anual. |
+
+Nos intervalos [a–b[, a idade a pertence ao grupo e a idade b fica no grupo seguinte. A expressão "proporção grave" é criada para este estudo e não corresponde ao índice de gravidade oficial ANSR, que tem outro denominador.
+
+### Indicadores e ferramentas
+
+A proporção de consequências graves é calculada por:
+
+`proporção grave = (feridos graves + mortos) / total de vítimas`
+
+A duração média por grupo resulta de:
+
+`duração média = soma dos dias / soma dos internamentos`
+
+Por exemplo, 1200 dias distribuídos por 150 episódios correspondem a oito dias por episódio. Isto não representa oito dias até à recuperação clínica. A razão de totais pondera corretamente grupos com dimensões diferentes; uma média simples das médias não o faria.
+
+A análise usa R e RStudio, `readr`, `readxl`, `dplyr`, `tidyr` e `ggplot2`. O relatório usa R Markdown/`knitr`, e o projeto inclui Git. As tabelas estatísticas, os ajustes e os gráficos são produzidos pelos scripts R.
+
+## Disponibilidade e validação inicial dos ficheiros
+
+Os ficheiros ANSR e SNS encontram-se em `data/raw/`. O script `executar_M2.R` importa os dados e produz a estrutura das variáveis e as dimensões dos quadros utilizados. As colunas e os totais têm unidades documentadas, e o recorte SNS satisfaz o mínimo de 1000 registos do guião.
+
+```{r dimensoes}
+knitr::kable(readr::read_csv("resultados/M2_dimensoes.csv", show_col_types = FALSE))
+```
+
+## Controlo de versões e continuidade
+
+O projeto utiliza Git para guardar versões do código e dos documentos. A preparação detalhada, as regras de seleção e a exploração dos dados são desenvolvidas no Momento 3. As perguntas não pressupõem que as fontes públicas permitam identificar o veículo de origem de cada internamento.
+
+# Referências
+
+AUTORIDADE NACIONAL DE SEGURANÇA RODOVIÁRIA. *Relatório Anual de Sinistralidade 24h e fiscalização rodoviária de 2024* e respetivo anexo Excel. 2025. Disponível em: <https://observatorioansr.pt/relatorios/>. Acesso em: 6 out. 2026.
+
+ADMINISTRAÇÃO CENTRAL DO SISTEMA DE SAÚDE. *Morbilidade e Mortalidade Hospitalar*. Portal Transparência SNS, identificador `morbilidade_mortalidade_hospit`. Disponível em: <https://transparencia.sns.gov.pt/explore/assets/morbilidade_mortalidade_hospit/>. Acesso em: 6 out. 2026.
+
+GOUVEIA, Luis Borges. *Guião de projeto: Seminário de Sistemas e Aplicações*. UFP, v. 1.2, set. 2026. Documento fornecido na unidade curricular.
+
+R CORE TEAM. *R: Fitting Linear Models — lm*. Documentação do R. Disponível em: <https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html>. Acesso em: 6 out. 2026.
+
+POSIT. *Tutorial: Hello, Quarto / RStudio*. Disponível em: <https://quarto.org/docs/get-started/hello/rstudio.html>. Acesso em: 6 out. 2026.
+

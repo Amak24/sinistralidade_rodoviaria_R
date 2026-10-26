@@ -1,0 +1,2 @@
+n_treino,n_teste,base_dias,limite_iqr_treino,previsoes_negativas,correlacao_residuos_lag1
+2407,2424,10.625431778929189,22.599358974358978,0,-0.5469868831804897
